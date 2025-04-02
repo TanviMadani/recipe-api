@@ -2,8 +2,7 @@ streamlit
 requests
 fastapi
 pydantic
-textwrap
-dotenv
+python-dotenv
 agno
 uvicorn
 duckduckgo-search

@@ -34,7 +34,7 @@ if get_recipe:
             "time_constraint": time_constraint
         }
         
-        response = requests.post("http://127.0.0.1:5001/get_recipe/", json=payload)
+        response = requests.post("https://your-render-app-url.onrender.com/get_recipe/", json=payload)
         
         if response.status_code == 200:
             recipe = response.json().get("recipe", "No recipe found.")

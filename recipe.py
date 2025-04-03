@@ -45,6 +45,8 @@ def get_recipe(request: RecipeRequest):
     response: RunResponse = recipe_agent.run(query)
     return {"recipe": response.content}
 
+import os
+
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run('recipe:app',host='127.0.0.1',port=5001,reload=True)
+    port = int(os.environ.get("PORT", 5001))  # Use the environment-provided port
+    uvicorn.run("recipe:app", host="0.0.0.0", port=port, reload=True)
